@@ -1,6 +1,97 @@
-.category-container {
-  background: linear-gradient(lightgreen, skyblue);
+/* Basic page styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f4f4f4;
 }
-.heart {
+
+header {
   text-align: center;
+}
+
+h1 {
+  font-family: "Press Start 2P", cursive;
+}
+
+/* Add Expense section */
+.add-expense-section {
+  background-color: white;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+/* Direct child selector */
+.add-expense-section > form {
+  padding: 10px;
+}
+
+/* Inputs */
+input:not([type="submit"]),
+select {
+  padding: 8px;
+  margin-top: 5px;
+}
+
+/* Focus selector */
+input:focus,
+select:focus {
+  border: 2px solid blue;
+  outline: none;
+}
+
+/* Button */
+button {
+  padding: 10px 15px;
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Expense table */
+.expenses-section table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+/* Descendant selector */
+.expenses-section td,
+.expenses-section th {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Header row */
+.expenses-section th {
+  background-color: #333;
+  color: white;
+}
+
+/* Alternating rows */
+.expenses-section tr:nth-child(even) {
+  background-color: #eeeeee;
+}
+
+/* Hover effect */
+.expenses-section tbody tr:hover {
+  background-color: #d9f2d9;
+}
+
+/* Total */
+tfoot {
+  font-weight: bold;
+}
+
+/* Details */
+details {
+  background-color: white;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
 }
