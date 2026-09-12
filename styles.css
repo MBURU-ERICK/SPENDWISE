@@ -1,97 +1,113 @@
-/* Basic page styling */
+```css
+* {
+    box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
 }
 
 header {
-  text-align: center;
+    text-align: center;
 }
 
 h1 {
-  font-family: "Press Start 2P", cursive;
+    font-size: 32px;
 }
 
 /* Add Expense section */
 .add-expense-section {
-  background-color: white;
-  padding: 20px;
-  margin: 20px 0;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 /* Direct child selector */
 .add-expense-section > form {
-  padding: 10px;
+    padding: 10px;
 }
 
-/* Inputs */
-input:not([type="submit"]),
-select {
-  padding: 8px;
-  margin-top: 5px;
+/* Form inputs */
+.add-expense-section input,
+.add-expense-section select {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
 /* Focus selector */
 input:focus,
 select:focus {
-  border: 2px solid blue;
-  outline: none;
+    outline: none;
+    border-color: #2e7d32;
+}
+
+/* Negation selector */
+input:not([type="submit"]) {
+    background-color: #fafafa;
 }
 
 /* Button */
 button {
-  padding: 10px 15px;
-  background-color: green;
-  color: white;
-  border: none;
-  cursor: pointer;
+    cursor: pointer;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #1b5e20;
 }
 
 /* Expense table */
-.expenses-section table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: white;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th {
+    background-color: #2e7d32;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Advanced selectors */
+tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+tr:hover {
+    background-color: #e8f5e9;
 }
 
 /* Descendant selector */
-.expenses-section td,
-.expenses-section th {
-  border: 1px solid black;
-  padding: 10px;
-  text-align: left;
-}
-
-/* Header row */
-.expenses-section th {
-  background-color: #333;
-  color: white;
-}
-
-/* Alternating rows */
-.expenses-section tr:nth-child(even) {
-  background-color: #eeeeee;
-}
-
-/* Hover effect */
-.expenses-section tbody tr:hover {
-  background-color: #d9f2d9;
-}
-
-/* Total */
-tfoot {
-  font-weight: bold;
+.expenses-section td {
+    font-size: 14px;
 }
 
 /* Details */
 details {
-  background-color: white;
-  padding: 15px;
-  margin-top: 20px;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: white;
 }
 
 summary {
-  cursor: pointer;
-  font-weight: bold;
+    cursor: pointer;
+    font-weight: bold;
 }
+```
