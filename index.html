@@ -1,138 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SpendWise</title>
-<link rel="stylesheet" href="styles.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
+    <title>SpendWise</title>
 
-<header>
-<h1>SpendWise</h1>
-<img src="budget-icon.png" alt="Budget Tracker logo" width="60">
-<p>Track your expenses and manage your budget effectively.</p>
-</header>
-  
-<!-- Add Expense -->
-<div class="add-expense-section">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
 
-<h2>Add Expense</h2>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<form>
+  <body>
+    <header>
+      <h1>SpendWise</h1>
 
-<input
-type="text"
-id="expense-name"
-placeholder="Expense name"
->
+      <img src="budget-icon.png" alt="Budget Tracker logo" width="60" />
 
-<input
-type="number"
-id="expense-amount"
-placeholder="Amount"
->
+      <p>Track your expenses and manage your budget effectively.</p>
+    </header>
 
-<select id="expense-category">
-<option value="food">Food</option>
-<option value="transport">Transport</option>
-<option value="rent">Rent</option>
-<option value="entertainment">Entertainment</option>
-<option value="other">Other</option>
-</select>
+    <!-- Add Expense -->
 
-<button type="button" id="add-expense-btn">
-Add Expense
-</button>
+    <div class="add-expense-section">
+      <h2>Add Expense</h2>
 
-</form>
+      <form>
+        <input type="text" id="expense-name" placeholder="Expense name" />
 
-</div>
+        <input type="number" id="expense-amount" placeholder="Amount" />
 
-<!-- Expenses -->
-<div class="expenses-section" id="expense-list">
+        <select id="expense-category">
+          <option value="food">Food</option>
+          <option value="transport">Transport</option>
+          <option value="rent">Rent</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="other">Other</option>
+        </select>
 
-<h2>Your Expenses</h2>
+        <button type="button" id="add-expense-btn">Add Expense</button>
+      </form>
+    </div>
 
-<table>
+    <!-- Expenses -->
 
-<thead>
-<tr>
-<th>Name</th>
-<th>Amount</th>
-<th>Category</th>
-<th>Date</th>
-</tr>
-</thead>
+    <div class="expenses-section" id="expense-list">
+      <h2>Your Expenses</h2>
 
-<tbody>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Date</th>
+          </tr>
+        </thead>
 
-<tr>
-<td>Groceries</td>
-<td>$45.00</td>
-<td>Food</td>
-<td>2026-06-20</td>
-</tr>
+        <tbody>
+          <tr>
+            <td>Groceries</td>
+            <td>$45.00</td>
+            <td>Food</td>
+            <td>2026-06-20</td>
+          </tr>
 
-<tr>
-<td>Bus Fare</td>
-<td>$5.00</td>
-<td>Transport</td>
-<td>2026-06-21</td>
-</tr>
+          <tr>
+            <td>Bus Fare</td>
+            <td>$5.00</td>
+            <td>Transport</td>
+            <td>2026-06-21</td>
+          </tr>
 
-<tr>
-<td>Netflix</td>
-<td>$12.00</td>
-<td>Entertainment</td>
-<td>2026-06-22</td>
-</tr>
+          <tr>
+            <td>Netflix</td>
+            <td>$12.00</td>
+            <td>Entertainment</td>
+            <td>2026-06-22</td>
+          </tr>
 
-<tr>
-<td>Rent</td>
-<td>$300.00</td>
-<td>Rent</td>
-<td>2026-06-01</td>
-</tr>
+          <tr>
+            <td>Rent</td>
+            <td>$300.00</td>
+            <td>Rent</td>
+            <td>2026-06-01</td>
+          </tr>
 
-<tr>
-<td>Coffee</td>
-<td>$3.50</td>
-<td>Food</td>
-<td>2026-06-23</td>
-</tr>
+          <tr>
+            <td>Coffee</td>
+            <td>$3.50</td>
+            <td>Food</td>
+            <td>2026-06-23</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-</tbody>
+    <!-- YouTube Video -->
 
-</table>
+    <h2>Budgeting Tips</h2>
 
-</div>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/your-video-id"
+      title="Budgeting tips for beginners"
+      frameborder="0"
+      allowfullscreen
+    >
+    </iframe>
 
-<!-- YouTube Video -->
-<h2>Budgeting Tips</h2>
+    <!-- How to use -->
 
-<iframe
-width="560"
-height="315"
-src="https://www.youtube.com/embed/your-video-id"
-title="Budgeting tips for beginners"
-frameborder="0"
-allowfullscreen>
-</iframe>
+    <details>
+      <summary>How to use this tracker</summary>
 
-<!-- How to use -->
-<details>
-
-<summary>How to use this tracker</summary>
-
-<p>
-Fill in the expense name, enter the amount,
-choose a category from the dropdown,
-then click "Add Expense" to record it.
-</p>
-
-</details>
-
-</body>
-</html>`
+      <p>
+        Fill in the expense name, enter the amount, choose a category from the
+        dropdown, then click "Add Expense" to record it.
+      </p>
+    </details>
+  </body>
+</html>

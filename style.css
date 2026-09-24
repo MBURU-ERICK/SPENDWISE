@@ -1,0 +1,339 @@
+* {
+  box-sizing: border-box;
+}
+
+/* ================================
+Color Palette
+================================ */
+
+:root {
+  --primary: #2e7d32;
+  --primary-dark: #1b5e20;
+  --primary-light: #e8f5e9;
+  --background: #f4f7f5;
+  --card: #ffffff;
+  --text: #263238;
+  --muted-text: #607d6b;
+  --border: #d9e2dc;
+  --table-row: #f7faf8;
+}
+
+/* ================================
+Body
+================================ */
+
+body {
+  font-family: "DM Sans", sans-serif;
+  margin: 0;
+  padding: 30px;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ================================
+Typography
+================================ */
+
+h1,
+h2 {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-dark);
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0 0 10px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+p {
+  color: var(--muted-text);
+}
+
+/* ================================
+Header Card
+================================ */
+
+header {
+  text-align: center;
+  background-color: var(--card);
+
+  padding: 30px;
+  margin-bottom: 25px;
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+header img {
+  margin: 10px 0;
+}
+
+header p {
+  margin: 5px 0 0;
+}
+
+/* ================================
+Add Expense Card
+================================ */
+
+.add-expense-section {
+  background-color: var(--card);
+
+  padding: 25px;
+  margin-bottom: 25px;
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Direct Child Selector */
+.add-expense-section > form {
+  padding: 5px;
+}
+
+/* ================================
+Form Inputs
+================================ */
+
+.add-expense-section input,
+.add-expense-section select {
+  display: block;
+
+  width: 100%;
+
+  margin-bottom: 15px;
+  padding: 12px 14px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+
+  background-color: #fafcfa;
+
+  border: 1px solid var(--border);
+  border-radius: 6px;
+
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+/* Placeholder */
+input::placeholder {
+  color: #8a9990;
+}
+
+/* Focus Selector */
+input:focus,
+select:focus {
+  outline: none;
+
+  border-color: var(--primary);
+
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.12);
+}
+
+/* Negation Selector */
+input:not([type="submit"]) {
+  background-color: #fafcfa;
+}
+
+/* ================================
+Button
+================================ */
+
+button {
+  cursor: pointer;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+
+  background-color: var(--primary);
+  color: white;
+
+  border: none;
+  border-radius: 6px;
+
+  padding: 12px 22px;
+
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
+}
+
+button:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+/* ================================
+Expense Table Card
+================================ */
+
+.expenses-section {
+  background-color: var(--card);
+
+  padding: 25px;
+  margin-bottom: 25px;
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  overflow-x: auto;
+}
+
+/* ================================
+Expense Table
+================================ */
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  background-color: white;
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Table Header */
+
+th {
+  background-color: var(--primary);
+  color: white;
+
+  padding: 14px;
+
+  text-align: left;
+
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+
+  border-bottom: 2px solid var(--primary-dark);
+}
+
+/* Table Data */
+
+td {
+  padding: 14px;
+
+  border-bottom: 1px solid var(--border);
+
+  font-size: 14px;
+}
+
+/* Alternating Row Colors */
+
+tr:nth-child(even) {
+  background-color: var(--table-row);
+}
+
+/* Row Hover */
+
+tr:hover {
+  background-color: var(--primary-light);
+}
+
+/* Remove border from final row */
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Descendant Selector */
+
+.expenses-section td {
+  font-size: 14px;
+}
+
+body > h2 {
+  background-color: var(--card);
+
+  padding: 20px;
+  margin: 25px 0 0;
+
+  border: 1px solid var(--border);
+  border-bottom: none;
+
+  border-radius: 12px 12px 0 0;
+}
+
+iframe {
+  display: block;
+
+  width: 100%;
+  max-width: 560px;
+
+  border: 1px solid var(--border);
+  border-radius: 0 0 12px 12px;
+
+  background-color: var(--card);
+}
+
+details {
+  margin-top: 25px;
+  padding: 20px;
+
+  background-color: var(--card);
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+summary {
+  cursor: pointer;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+
+  color: var(--primary-dark);
+}
+
+details p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+
+  header {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .add-expense-section,
+  .expenses-section {
+    padding: 18px;
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
+
+  iframe {
+    height: 250px;
+  }
+}
